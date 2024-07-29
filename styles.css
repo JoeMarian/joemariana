@@ -1,0 +1,1063 @@
+/* General styles */
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background: url('about-me.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+    height: 60px; /* Ensure the navbar has a height */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center; /* Center align the container elements */
+    align-items: center;
+    height: 100%; /* Match the height of the navbar */
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Add some space between the links */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white; /* Ensure links are white */
+    text-decoration: none;
+    font-size: 18px; /* Font size for links */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f0f0f0;
+}
+
+.resume {
+    color: white; /* Ensure the Resume link is white */
+    font-size: 18px; /* Match the font size of the nav links */
+    text-decoration: none; /* Remove underline */
+    margin-left: 600px; /* Space between central links and Resume */
+}
+
+.navbar::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 0; /* Place the overlay behind the text */
+}
+
+.nav-links, .resume {
+    position: relative;
+    z-index: 1; /* Ensure text is above the overlay */
+}
+
+
+/* Remove the default margin bottom */
+/* Remove the default margin bottom */
+section {
+    margin-bottom: 0; /* Remove the default margin bottom */
+    padding-bottom: 0; /* Remove the default padding bottom */
+  }
+  
+  section + section {
+    margin-top: 0; /* Remove the margin top for adjacent sections */
+  }
+/* Parallax effect styles */
+section#home {
+    position: relative;
+    height: 60vh; /* Adjusted height */
+    overflow: hidden;
+    color: white;
+}
+
+.home-section {
+    padding-top: 80px;
+    background-image: url('about-me.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333; /* Set text color to black */
+  }
+  
+  .home-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333; /* Set font color to black */
+  }
+  
+  .home-section p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #333; /* Set font color to black */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between boxes */
+    margin-top: 50px;
+  }
+  
+  .get-in-touch, .resume-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Fixed width */
+    height: auto; /* Adjust height automatically */
+  }
+  
+  .get-in-touch h2, .resume-box h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .get-in-touch a, .resume-box a {
+    text-decoration: none;
+    color: #337ab7;
+    transition: color 0.2s ease;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid #337ab7;
+    border-radius: 5px;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .get-in-touch a:hover, .resume-box a:hover {
+    color: #23527c;
+  }
+  
+
+.about-background {
+    background-image: url('about-me.jpeg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Adjusted height to match home section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.about-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparent initially */
+    transition: background 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.about-background:hover::after {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay on hover */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+    width: 80%; /* Adjust width to fit more text */
+    margin: 0 auto; /* Center the container */
+}
+
+.about-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-photo img {
+    width: 150px; /* Adjust size */
+    height: 150px; /* Adjust size */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 20px;
+}
+
+.about-line {
+    width: 2px;
+    height: 150px; /* Match the image height */
+    background-color: #333;
+    animation: growLine 2s ease-in-out forwards infinite alternate;
+    margin-right: 20px;
+}
+
+@keyframes growLine {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 150px; /* Match the image height */
+    }
+}
+
+.about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-text h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.about-content {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.9); /* Light background */
+}
+
+.about-content:hover {
+    border-color: #333;
+    background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+}
+
+.about-content p {
+    margin: 0;
+    font-size: 1rem; /* Adjust as needed */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
+
+/* Education section */
+.education-background {
+    background-image: url('about-me.jpeg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.education-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparent initially */
+    transition: background 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.education-background:hover::after {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay on hover */
+}
+
+.education-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 0 auto; /* Center the container */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.education-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.education-content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* Space between boxes */
+}
+
+.education-left,
+.education-right {
+    flex: 1;
+}
+
+.education-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+}
+
+.education-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+}
+
+.education-content h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.education-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Experience section */
+/* Experience section */
+/* Container for the entire experience section with a background image */
+
+.experience-background {
+    background-image: url('about-me.jpeg'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    /* Ensure the background spans the entire width */
+    padding: 30px 0; /* Adjusted padding */
+}
+
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: black;
+}
+
+.experience-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.experience-heading a{
+    color: #000000;
+}
+.timeline {
+    position: relative;
+    padding-left: 30px; /* Adjusted */
+    border-left: 3px solid #000000;
+    margin-top: 20px;
+}
+
+.experience-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 60px;
+}
+
+.dot {
+    position: absolute;
+    left: -41.5px; /* Moved slightly to the right */
+    top: 50%;
+    transform: translateY(-50%); /* Center the dot vertically */
+    width: 20px;
+    height: 20px;
+    background-color: #0e0909;
+    border-radius: 50%;
+}
+
+.experience-content {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjusted for better visibility */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.experience-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.badge {
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.duration {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.view-report-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.view-report-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .experience-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .badge {
+        font-size: 0.8rem;
+    }
+    
+    .duration {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Remove arrow from About section */
+.about-content .arrow {
+    display: none;
+}
+/* Projects section */
+.projects-background {
+    background-image: url('about-me.jpeg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.projects-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparent initially */
+    transition: background 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.projects-background:hover::after {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay on hover */
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.projects-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading for the Projects section */
+.projects-heading {
+    margin-bottom: 20px; /* Space between heading and container */
+    font-size: 2rem; /* Adjust font size */
+    text-align: center;
+}
+
+/* Container for project boxes */
+.projects-content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Each project box */
+.projects-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 30%; /* Fixed width to ensure same size for all boxes */
+    box-sizing: border-box;
+}
+
+/* Hover effect for the project box */
+.projects-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Content within the project box */
+.projects-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+}
+
+/* Title in the project content */
+.projects-content h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* View More section */
+.view-more {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.view-more p {
+    margin: 0;
+}
+
+/* Arrow */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+    margin: 10px auto 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Arrow animation on hover */
+.projects-box:hover .arrow {
+    transform: translateY(5px);
+}
+
+/* Adding smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Projects section */
+.projects-background {
+    background-image: url('about-me.jpeg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.projects-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparent initially */
+    transition: background 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.projects-background:hover::after {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay on hover */
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.projects-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading for the Projects section */
+.projects-heading {
+    margin-bottom: 20px; /* Space between heading and container */
+    font-size: 2rem; /* Adjust font size */
+    text-align: center;
+}
+
+/* Container for project boxes */
+.projects-content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Each project box */
+.projects-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 30%; /* Fixed width to ensure same size for all boxes */
+    box-sizing: border-box;
+}
+
+/* Hover effect for the project box */
+.projects-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Content within the project box */
+.projects-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+}
+
+/* Title in the project content */
+.projects-content h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* View More section */
+.view-more {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.view-more p {
+    margin: 0;
+}
+
+/* Arrow */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+    margin: 10px auto 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Arrow animation on hover */
+.projects-box:hover .arrow {
+    transform: translateY(5px);
+}
+
+/* Adding smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/*skills*/
+/* Skills section */
+
+#skills {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: black;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#skills:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+}
+
+.skills-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('about-me.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: filter 0.3s ease-in-out;
+}
+
+.skills-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparent initially */
+    transition: background 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.skills-background:hover::after {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay on hover */
+}
+
+.skills-container {
+    position: relative;
+    z-index: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.skills-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    opacity: 0.8;
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.skills-content:hover {
+    opacity: 0.8;
+}
+
+.coding-languages, .technical-skills {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.coding-languages:hover, .technical-skills:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+h1, h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+h1:hover, h2:hover {
+    color: #444;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+span:hover {
+    color: #444;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.progress-bar:hover {
+    background-color: #ccc;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-bar:hover .progress {
+    width: 100%;
+}
+
+/* Add some animations to the skills section */
+.skills-container {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.coding-languages, .technical-skills {
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Add some CSS grid to make the skills section more responsive */
+.skills-content {
+   display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.coding-languages, .technical-skills {
+    grid-column: span 1;
+}
+
+.progress {
+    transition: width 1s ease-in-out;
+}
+
+.animate {
+    width: 0%;
+}
+
+/* Add some media queries to make the skills section more responsive */
+@media (max-width: 768px) {
+   .skills-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+   .skills-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+   .coding-languages, .technical-skills {
+        margin: 10px;
+    }
+}
+/* Add some media queries to make the skills section more responsive */
+
+/* Add some media queries to make the skills section more responsive */
+
+/* Add some media queries to make the skills section more responsive */
+/* Contact Section */
+#contact {
+    background-color: #f5f5f5; /* Light grey background */
+    padding: 50px 0; /* Padding at the top and bottom */
+}
+
+.contact-container {
+    max-width: 800px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Center align text */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+.contact-container h1 {
+    font-size: 2.5em; /* Font size for the heading */
+    margin-bottom: 30px; /* Margin below the heading */
+    color: #333; /* Dark text color */
+}
+
+.contact-info {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center align items horizontally */
+    gap: 50px; /* Space between items */
+    margin-bottom: 30px; /* Margin below the contact info */
+}
+
+.contact-item {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center align items vertically */
+}
+
+.contact-item i {
+    font-size: 1.5em; /* Icon size */
+    margin-right: 10px; /* Space to the right of the icon */
+    color: #333; /* Dark text color */
+}
+
+.contact-item a {
+    font-size: 1.2em; /* Font size for the links */
+    color: #333; /* Dark text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-item a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.social-media {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center align items horizontally */
+    gap: 20px; /* Space between icons */
+}
+
+.social-media a i {
+    font-size: 2em; /* Icon size */
+    color: #333; /* Dark text color */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.social-media a i:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+    color: #0077b5; /* LinkedIn blue color for hover effect */
+}
